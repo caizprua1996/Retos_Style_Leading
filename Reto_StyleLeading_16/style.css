@@ -1,0 +1,36 @@
+:root{
+    --main-bg-color: #6592CF;
+    --main-element-color: #243D83;
+    --btn-color: #EEB850;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+}
+.A{
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: var(--main-element-color);
+}
+.A::before{
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle, var(--btn-color) 0%,
+        var(--btn-color) 13%,
+        var(--main-element-color) 13%,
+        var(--main-element-color) 40%,
+        var(--main-bg-color) 40%
+    );
+    transform: translate(10.5%, -20%);
+}

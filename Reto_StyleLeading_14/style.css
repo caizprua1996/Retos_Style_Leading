@@ -1,0 +1,46 @@
+:root{
+    --main-bg-color: #191919;
+    --line-color: #E08027;
+}
+body{
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.A{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 40px solid var(--line-color);
+}
+.A::before{
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 25px;
+    border: 18px solid var(--line-color);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom: transparent;
+    transform: translate(118%, 240%);
+}
+.A::after{
+    position: absolute;
+    content: "";
+    background-color: var(--line-color);
+    height: 100px;
+    width: 150px;
+    transform: translate(-23%, -38%);
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+.B{
+    position: relative;
+    height: 140px;
+    width: 80px;
+    background-color: var(--line-color);
+    transform: translate(-40%, 75%) rotate(-50deg);
+}

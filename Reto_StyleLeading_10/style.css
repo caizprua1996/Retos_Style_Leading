@@ -1,0 +1,45 @@
+:root{
+    --main-bg-color:#1A4341;
+    --main-line-color:#F3AC3C;
+}
+body{
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+*,::before, *::after{
+    box-sizing: border-box;
+}
+.A{
+    position: relative;
+    height: 500px;
+    width: 500px;
+    background: repeating-linear-gradient(
+        var(--main-line-color),
+        var(--main-line-color) 55px,
+        transparent 55px,
+        transparent 100px
+    );
+}
+.A::before{
+    position: absolute;
+    content: "";
+    background: var(--main-bg-color);
+    width: 260px;
+    height: 500px;
+    border-radius: 50%;
+    transform: translate(-55%, -5%);
+}
+.A::after{
+    position: absolute;
+    content: "";
+    background: var(--main-bg-color);
+    width: 260px;
+    height: 500px;
+    border-radius: 50%;
+    transform: translate(155%, -5%);
+}

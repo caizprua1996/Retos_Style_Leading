@@ -1,0 +1,23 @@
+:root{
+  --color-line-1: #F7EC7D;
+  --color-line-2: #E38F66;
+  --color-line-3: #AA445F;
+  --color-line-4: #62306D;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(
+    0deg, var(--color-line-4) 0%,
+    var(--color-line-4) 34%,
+    var(--color-line-3) 34%,
+    var(--color-line-3) 67%,
+    var(--color-line-2) 67%,
+    var(--color-line-2) 83%,
+    var(--color-line-1) 83%,
+    var(--color-line-1) 100%
+  );
+}
