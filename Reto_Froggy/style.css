@@ -1,0 +1,59 @@
+:root{
+    --main-bg-color: #293462;
+    --froggy-top-color: #FE5F55;
+    --froggy-bottom-color: #A64942;
+    --froggy-eyes-color: #FFF1C1;
+}
+body{
+    background-color: var(--main-bg-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.A{
+    position: relative;
+    width: 150px;
+    height: 100px;
+    background-color: var(--froggy-bottom-color);
+    border-radius: 50px;
+}
+.A::before{
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 100px;
+    background-color: var(--froggy-top-color);
+    border-radius: 50px;
+    clip-path: ellipse(72% 50% at 50% 21%);
+}
+p{
+    position: absolute;
+    color: var(--main-bg-color);
+    font-size: 98px;
+    letter-spacing: -5px;
+    bottom: -83px;
+    left: 52px;
+}
+.B{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-bg-color);
+    border: 10px solid var(--froggy-eyes-color);
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 10px var(--froggy-top-color);
+    transform: translate(-125%, -160%);
+}
+.B::after{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-bg-color);
+    border: 10px solid var(--froggy-eyes-color);
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 10px var(--froggy-top-color);
+    transform: translate(200%, -35%);
+}
